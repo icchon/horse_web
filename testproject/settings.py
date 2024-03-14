@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-c+_=q78srp9cssd8pusg(#-y!x=sdi7&yr&f-weqq9caudkop#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["3.26.158.16"]
+ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'icchon.pythonanywhere.com']
 
 
 # Application definition
@@ -113,6 +113,9 @@ TIME_ZONE = 'Asia/Tokyo'
 USE_I18N = True
 
 USE_TZ = True
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 # Static files (CSS, JavaScript, Images)
