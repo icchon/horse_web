@@ -32,6 +32,9 @@ pay_dict_path = os.path.join(pickle_dir, "pay_dict.pickle")
 #dict_horse_ped_dict_path = os.path.join(pickle_dir, "dict_horse_ped.pickle")
 data_path = os.path.join(pickle_dir, "data.pickle")
 
+pay_dict_path = "pay_dict.pickle"
+data_path = "data.pickle"
+
 #results_addinfo = pd.read_pickle(result_addinfo_path)
 #horse_history = pd.read_pickle(horse_history_path)
 #jockey_history = pd.read_pickle(jockey_history_path)
