@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-#STATIC_DIR = Path.joinpath(BASE_DIR, 'static')
+STATIC_DIR = Path.joinpath(BASE_DIR, 'static')
 
 
 
@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c+_=q78srp9cssd8pusg(#-y!x=sdi7&yr&f-weqq9caudkop#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [".pythonanywhere.com", "icchon.pythonanywhere.com", "localhost"]
+ALLOWED_HOSTS = ["3.106.139.136"]
 
 
 # Application definition
@@ -114,8 +114,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -133,6 +131,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesSto
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / "static"
+
 """
 STATICFILES_DIRS = [
   BASE_DIR / "static",
