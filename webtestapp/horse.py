@@ -32,17 +32,14 @@ pay_dict_path = os.path.join(pickle_dir, "pay_dict.pickle")
 #dict_horse_ped_dict_path = os.path.join(pickle_dir, "dict_horse_ped.pickle")
 data_path = os.path.join(pickle_dir, "data.pickle")
 
-pay_dict_path = "pay_dict.pickle"
-data_path = "data.pickle"
-
 #results_addinfo = pd.read_pickle(result_addinfo_path)
 #horse_history = pd.read_pickle(horse_history_path)
 #jockey_history = pd.read_pickle(jockey_history_path)
 #dict_horse_history = {idx: horse_history.loc[idx] for idx in horse_history.index.unique()}
-"""
+
 with open(pay_dict_path, "rb") as f:
     pay_dict = pickle.load(f)
-"""    
+
 """    
 with open(dict_horse_ped_dict_path, "rb") as f:
     horse_ped_dict = pickle.load(f)
@@ -310,13 +307,9 @@ class Evaluater():
 
 
 def get_simulation_dict(n_bins=20, features={}, test_size=0.3, feature_combinations=[]):
-    #data = pd.read_pickle(data_path)
-    #X, y = data.drop(["着順"], axis=1), -data["着順"]
-    X = np.lispace(0, 10, 100)
-    y = np.linspace(0, 10, 100)
-    return {"kaishuuritu":np.linspace(0, 10, 100), 
-           "bet_percent":np.linspace(0, 10, 100),}, X
-    
+    data = pd.read_pickle(data_path)
+    X, y = data.drop(["着順"], axis=1), -data["着順"]
+   
     odds = False  
     use_features = ["馬番","単勝", "セ"]
 
